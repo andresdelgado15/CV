@@ -884,9 +884,13 @@ h3.my-profession {
         max-width: 100%;
     }
     .home .home-img {
-        display: block;
+        display: flex;
         padding: 50px;
-        margin: auto;
+        margin: auto ;
+        width: 70%;
+        align-items: center;
+        justify-content: center;
+        
     }
 
 }
