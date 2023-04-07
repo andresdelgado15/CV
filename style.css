@@ -767,6 +767,29 @@ h3.my-profession {
     height: 50px;
     padding: 0 50px;
 }
+/* start the email form- send email */
+#mensaje-enviado {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  .contenido-mensaje {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  }
+/* end the email form- send email */
 
 @media (max-width:1199px) {
     .section .container{

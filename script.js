@@ -78,3 +78,33 @@ function asideSectionTogglerBtn()
         allSection[i].classList.toggle("open");
     }
 }
+// =====================   SEND ME AN EMAIL  ========================
+function enviarFormulario(event) {
+  event.preventDefault();
+
+  const form = event.target;
+  const xhr = new XMLHttpRequest();
+  xhr.open(form.method, form.action);
+  xhr.setRequestHeader('Accept', 'application/json');
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState !== XMLHttpRequest.DONE) return;
+    if (xhr.status === 200) {
+      form.reset();
+      mostrarMensajeEnviado();
+    } else {
+      console.error('Error al enviar formulario:', xhr.status);
+    }
+  };
+  xhr.send(new FormData(form));
+}
+
+function mostrarMensajeEnviado() {
+  const mensajeEnviado = document.querySelector('#mensaje-enviado');
+  mensajeEnviado.style.display = 'block';
+  setTimeout(function() {
+    mensajeEnviado.style.display = 'none';
+  }, 5000);
+}
+
+  
+// =====================   SEND ME AN EMAIL  ========================
