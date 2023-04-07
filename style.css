@@ -7,7 +7,8 @@
     --text-black-900: #302e4d;
     --text-black-700: #504e70;
 }
-body.dark{
+
+body.dark {
     --bg-black-900: #151515;
     --bg-black-100: #222222;
     --bg-black-50: #393939;
@@ -52,21 +53,25 @@ ul {
     z-index: 0;
     overflow-y: auto;
     overflow-x: hidden;
-    transition:  all 0.3s ease;
+    transition: all 0.3s ease;
 }
-.section.back-section{
-    z-index:1;
+
+.section.back-section {
+    z-index: 1;
 }
-.section.active{
+
+.section.active {
     z-index: 2;
     opacity: 1;
     animation: slideSection 1s ease;
 }
-@keyframes slideSection{
-    0%{
+
+@keyframes slideSection {
+    0% {
         transform: translateX(100%);
     }
-    100%{
+
+    100% {
         transform: translateX(0%);
     }
 }
@@ -232,7 +237,7 @@ ul {
     display: none;
     align-items: center;
     justify-content: center;
-    transition:  all 0.3s ease;
+    transition: all 0.3s ease;
 
 }
 
@@ -244,6 +249,7 @@ ul {
     position: relative;
 
 }
+
 .aside .nav-toggler.open span {
     background-color: transparent;
 }
@@ -257,6 +263,7 @@ ul {
     top: -6px;
     left: 0;
 }
+
 .aside .nav-toggler.open span::before {
     transform: rotate(45deg);
     top: 0;
@@ -271,10 +278,12 @@ ul {
     top: 6px;
     left: 0;
 }
+
 .aside .nav-toggler.open span::after {
     transform: rotate(-45deg);
     top: 0;
 }
+
 .aside .nav {
     margin-top: 50px;
 }
@@ -355,8 +364,8 @@ h3.my-profession {
     width: 80px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
+    right: 6%;
+    bottom: -6%;
 }
 
 .home-img::before {
@@ -366,8 +375,8 @@ h3.my-profession {
     width: 80px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top: -40px;
+    left: 6%;
+    top: -6%;
 }
 
 .home .home-img img {
@@ -767,6 +776,7 @@ h3.my-profession {
     height: 50px;
     padding: 0 50px;
 }
+
 /* start the email form- send email */
 #mensaje-enviado {
     position: fixed;
@@ -777,9 +787,9 @@ h3.my-profession {
     display: none;
     z-index: 9999;
     background-color: rgba(0, 0, 0, 0.5);
-  }
+}
 
-  .contenido-mensaje {
+.contenido-mensaje {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -788,33 +798,40 @@ h3.my-profession {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-/* end the email form- send email */
+}
 
+/* end the email form- send email */
 @media (max-width:1199px) {
-    .section .container{
+    .section .container {
         padding-top: 70px;
 
     }
+
     .aside {
         left: -270px;
     }
-    .aside.open{
+
+    .aside.open {
         left: 0;
     }
-    .aside .nav-toggler{
+
+    .aside .nav-toggler {
         display: flex;
         left: 30px;
     }
-    .aside .nav-toggler.open{
+
+    .aside .nav-toggler.open {
         left: 280px;
     }
-    .section{
+
+    .section {
         left: 0;
     }
-    .section.open{
+
+    .section.open {
         left: 270px;
     }
+
     .about .about-content .personal-info .info-item p span {
         display: block;
         margin-left: 0;
@@ -830,16 +847,31 @@ h3.my-profession {
         max-width: 50%;
     }
 
+    .home-img::after {
+        border-bottom: none;
+        border-right: none;
+    }
+
+    .home-img::before {
+
+        border-top: none;
+        border-left: none;
+
+    }
     .home .home-info {
         flex: 0 0 100%;
         max-width: 100%;
-    }
 
+    }
     .home .home-img {
-        display: none;
+        display: block;
+        padding: 50px;
+        margin: auto;
     }
 }
-@media (max-width:767px){
+
+@media (max-width:767px) {
+
     .contact .contact-form .col-6,
     .contact .contact-info-item,
     .portfolio .portfolio-item,
@@ -847,9 +879,14 @@ h3.my-profession {
     .about .about-content .experience,
     .about .about-content .education,
     .about .about-content .skills,
-    .about .about-content .personal-info
-    {
+    .about .about-content .personal-info {
         flex: 0 0 100%;
         max-width: 100%;
     }
+    .home .home-img {
+        display: block;
+        padding: 50px;
+        margin: auto;
+    }
+
 }
